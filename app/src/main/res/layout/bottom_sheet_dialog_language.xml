@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetLinear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvEnglish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        android:padding="8dp"
+        android:text="English"
+        android:textColor="@color/md_theme_onPrimaryContainer"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/tv_uzbek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="32dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="Uzbek"
+            android:textColor="@color/md_theme_onPrimaryContainer"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/btn_soon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/bg_coming_soon"
+            android:clickable="false"
+            android:paddingHorizontal="12dp"
+            android:text="Tez kunda"
+            android:textColor="@color/md_theme_primary"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

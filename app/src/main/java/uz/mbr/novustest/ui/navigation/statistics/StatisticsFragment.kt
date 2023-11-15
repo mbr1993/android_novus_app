@@ -1,19 +1,19 @@
-package uz.mbr.novustest.ui.home
+package uz.mbr.novustest.ui.navigation.statistics
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import uz.mbr.novustest.R
-import uz.mbr.novustest.databinding.FragmentHomeBinding
+import uz.mbr.novustest.databinding.FragmentStatisticsBinding
 
-class HomeFragment : Fragment(R.layout.fragment_home) {
+class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentStatisticsBinding? = null
     private val binding get() = _binding!!
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentHomeBinding.bind(view)
+        _binding = FragmentStatisticsBinding.bind(view)
     }
 
     override fun onDestroyView() {

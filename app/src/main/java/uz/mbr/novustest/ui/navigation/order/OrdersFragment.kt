@@ -1,4 +1,4 @@
-package uz.mbr.novustest.ui.order
+package uz.mbr.novustest.ui.navigation.order
 
 import android.os.Bundle
 import android.view.View
