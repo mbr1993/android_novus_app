@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pattern"
+    tools:context=".ui.VerificationFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/icon_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/back"
+        app:backgroundTint="@color/md_theme_secondaryContainer"
+        app:cornerRadius="8sp"
+        app:icon="@drawable/icon_back"
+        app:iconSize="24dp"
+        app:iconTint="@color/md_theme_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:text="Enter 5-digit\nVerification code"
+        android:textColor="#09051C"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_back" />
+
+    <TextView
+        android:id="@+id/textSendingInform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="32dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="40dp"
+        android:text="@string/text_code_sent"
+        android:textColor="#09051C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <LinearLayout
+        android:id="@+id/group_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textSendingInform">
+
+        <EditText
+            android:id="@+id/tv_1"
+            android:layout_width="48dp"
+            android:layout_height="55dp"
+            android:background="@drawable/box_verification"
+            android:contentDescription="@string/text"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:text=""
+            android:textColor="#09051C"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/tv_2"
+            android:layout_width="48dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/box_verification"
+            android:contentDescription="@string/text"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:text=""
+            android:textColor="#09051C"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/tv_3"
+            android:layout_width="48dp"
+            android:layout_height="55dp"
+            android:background="@drawable/box_verification"
+            android:contentDescription="@string/text"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:text=""
+            android:textColor="#09051C"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/tv_4"
+            android:layout_width="48dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/box_verification"
+            android:contentDescription="@string/text"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:text=""
+            android:textColor="#09051C"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/tv_5"
+            android:layout_width="48dp"
+            android:layout_height="55dp"
+            android:background="@drawable/box_verification"
+            android:contentDescription="@string/text"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:text=""
+            android:textColor="#09051C"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Password is not correct"
+        android:textColor="#E42E3B"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group_code" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:paddingHorizontal="48dp"
+        android:paddingVertical="18dp"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:backgroundTint="@color/main_green_color"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mask"
+    android:orientation="vertical"
+    tools:context=".ui.order.OrdersFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="12dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/active_order_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:text="Active orders"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:backgroundTint="@color/main_green_color"
+            app:cornerRadius="15dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/order_history_btn"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:text="Order history"
+            android:textAllCaps="false"
+            android:textColor="@color/main_green_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="15dp"
+            app:strokeColor="@color/main_green_color" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="12dp"
+                app:cardBackgroundColor="@color/md_theme_onPrimary"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/mask"
+                    android:backgroundTint="@color/main_green_color">
+
+                    <TextView
+                        android:id="@+id/text_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Id:8"
+                        android:textColor="#474750"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/order_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:text="Chaynaya N1"
+                        android:textColor="#474750"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/group_food"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/order_name"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/corner_with_white_opacity"
+                        android:backgroundTint="#EDEDED">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:text="Hot-Dog"
+                            android:textColor="#0C0C0C"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:text="3 x 14 000 = 42 000"
+                            android:textColor="#0C0C0C"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/client"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/group_food"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Client"
+                        android:textColor="#474750"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/client_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/group_food"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="14dp"
+                        android:text="Ernazar Torebaev"
+                        android:textColor="#474750"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/payment_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/client"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Payment type"
+                        android:textColor="#474750"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/payemnt_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/client_name"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="14dp"
+                        android:text="Cash"
+                        android:textColor="#474750"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/payemnt_name"
+                        android:layout_marginTop="8dp"
+                        android:background="#47475066" />
+
+                    <TextView
+                        android:id="@+id/total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Total"
+                        android:textColor="#474750"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/total_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="14dp"
+                        android:text="42 000"
+                        android:textColor="#474750"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/total"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@drawable/icon_back_with_white_opacity"
+                            android:backgroundTint="#EDEDED"
+                            android:src="@drawable/icon_x" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@drawable/icon_back_with_white_opacity"
+                            android:backgroundTint="#EDEDED"
+                            android:src="@drawable/phone" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardBackgroundColor="#F3AD70"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/mask">
+
+                    <TextView
+                        android:id="@+id/text_start_orange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Id:8"
+                        android:textColor="#474750"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/order_name_orange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:text="Chaynaya N1"
+                        android:textColor="#474750"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/group_food_orange"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/order_name_orange"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/corner_with_white_opacity"
+                        android:backgroundTint="#88F48D31">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:text="Hot-Dog"
+                            android:textColor="#0C0C0C"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:text="3 x 14 000 = 42 000"
+                            android:textColor="#0C0C0C"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/client_orange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/group_food_orange"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Client"
+                        android:textColor="#474750"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/client_name_orange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/group_food_orange"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="14dp"
+                        android:text="Ernazar Torebaev"
+                        android:textColor="#474750"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/payment_type_orange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/client_orange"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Payment type"
+                        android:textColor="#474750"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/payemnt_name_orange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/client_name_orange"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="14dp"
+                        android:text="Cash"
+                        android:textColor="#474750"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/line_orange"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/payemnt_name_orange"
+                        android:layout_marginTop="8dp"
+                        android:background="#47475066" />
+
+                    <TextView
+                        android:id="@+id/total_orange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line_orange"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Total"
+                        android:textColor="#474750"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/total_name_orange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line_orange"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="14dp"
+                        android:text="42 000"
+                        android:textColor="#474750"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/total_orange"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@drawable/icon_back_with_white_opacity"
+                            android:backgroundTint="#EDEDED"
+                            android:src="@drawable/icon_x" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@drawable/icon_back_with_white_opacity"
+                            android:backgroundTint="#EDEDED"
+                            android:src="@drawable/phone" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardBackgroundColor="#4D9CF9"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/mask">
+
+                    <TextView
+                        android:id="@+id/text_start_blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Id:8"
+                        android:textColor="#474750"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/order_name_blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:text="Chaynaya N1"
+                        android:textColor="#474750"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/group_food_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/order_name_blue"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/corner_with_white_opacity"
+                        android:backgroundTint="#992F80ED">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:text="Hot-Dog"
+                            android:textColor="#0C0C0C"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:text="3 x 14 000 = 42 000"
+                            android:textColor="#0C0C0C"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/client_blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/group_food_blue"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Client"
+                        android:textColor="#474750"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/client_name_blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/group_food_blue"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="14dp"
+                        android:text="Ernazar Torebaev"
+                        android:textColor="#474750"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/payment_type_blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/client_blue"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Payment type"
+                        android:textColor="#474750"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/payemnt_name_blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/client_name_blue"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="14dp"
+                        android:text="Cash"
+                        android:textColor="#474750"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/line_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/payemnt_name_blue"
+                        android:layout_marginTop="8dp"
+                        android:background="#BE214774" />
+
+                    <TextView
+                        android:id="@+id/total_blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line_blue"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Total"
+                        android:textColor="#474750"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/total_name_blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line_blue"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="14dp"
+                        android:text="42 000"
+                        android:textColor="#474750"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/total_blue"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/icon_back_with_white_opacity"
+                            android:src="@drawable/icon_x" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="12dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/icon_back_with_white_opacity"
+                            android:src="@drawable/phone" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/icon_back_with_white_opacity"
+                            android:src="@drawable/check" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardBackgroundColor="#F3DD70"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/mask">
+
+                    <TextView
+                        android:id="@+id/text_start_yellow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Id:8"
+                        android:textColor="#474750"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/order_name_yellow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:text="Chaynaya N1"
+                        android:textColor="#474750"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/group_food_yellow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/order_name_yellow"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/corner_with_white_opacity"
+                        android:backgroundTint="#F4DD0C">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:text="Hot-Dog"
+                            android:textColor="#0C0C0C"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:text="3 x 14 000 = 42 000"
+                            android:textColor="#0C0C0C"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/client_yellow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/group_food_yellow"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Client"
+                        android:textColor="#474750"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/client_name_yellow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/group_food_yellow"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="14dp"
+                        android:text="Ernazar Torebaev"
+                        android:textColor="#474750"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/payment_type_yellow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/client_yellow"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Payment type"
+                        android:textColor="#474750"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/payemnt_name_yellow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/client_name_yellow"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="14dp"
+                        android:text="Cash"
+                        android:textColor="#474750"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/line_yellow"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/payemnt_name_yellow"
+                        android:layout_marginTop="8dp"
+                        android:background="#B4BAA90C" />
+
+                    <TextView
+                        android:id="@+id/total_yellow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line_yellow"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Total"
+                        android:textColor="#474750"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/total_name_yellow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line_yellow"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="14dp"
+                        android:text="42 000"
+                        android:textColor="#474750"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/total_yellow"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/icon_back_with_white_opacity"
+                            android:src="@drawable/icon_x" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="12dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/icon_back_with_white_opacity"
+                            android:src="@drawable/phone" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/icon_back_with_white_opacity"
+                            android:src="@drawable/check" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

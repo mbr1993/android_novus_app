@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="buttonTexAppearanceStyle" parent="@style/TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="SlideActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+    </style>
+
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/main_green_color</item>
+    </style>
+
+    <style name="tabFontStyle" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+</resources>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Novus test</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">This is splash screen</string>
+    <string name="title_app">Title app</string>
+    <string name="profile">Profile</string>
+    <string name="statistics">Statistics</string>
+    <string name="login_to_your_account">Login To Your Account</string>
+    <string name="notification">notification</string>
+    <string name="orders">Orders</string>
+    <string name="_12_800_uzs">12 800 UZS</string>
+    <string name="some_text">Get <font color='#1EC57B\'>500 uzs</font> bonus from each completed order.</string>
+    <string name="back">back</string>
+    <string name="text">text</string>
+    <string name="text_code_sent">Code send to +998 %1$s. This code will expired in 01:30</string>
+    <string name="btn_continue_text">Continue</string>
+    <string name="enter_your_number">Enter your number</string>
+    <string name="app_logo">App logo</string>
+</resources>
